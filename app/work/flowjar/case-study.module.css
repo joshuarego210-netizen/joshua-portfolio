@@ -1,0 +1,92 @@
+.page {
+  --case-green: #123f31;
+  --case-blue: #1648d8;
+  --case-lime: #c9f54a;
+  background: #fbfcfa;
+  color: #11130f;
+}
+
+.backLink { display: inline-block; margin-bottom: clamp(46px, 6vw, 78px); color: #62675f; font-size: .82rem; }
+.backLink:hover, .backLink:focus-visible { color: var(--case-blue); }
+.hero { padding: clamp(42px, 5vw, 68px) 0 clamp(76px, 9vw, 118px); }
+.heroMeta { display: grid; grid-template-columns: 1fr 1fr auto; gap: 24px; padding: 13px 0; border-top: 1px solid #c8cec5; color: #656a62; font-size: .76rem; letter-spacing: .06em; text-transform: uppercase; }
+.heroGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .62fr); gap: clamp(48px, 8vw, 116px); align-items: end; padding: clamp(48px, 6vw, 78px) 0 clamp(50px, 6vw, 78px); }
+.hero h1 { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: clamp(4.8rem, 9vw, 9rem); font-weight: 500; line-height: .88; letter-spacing: -.075em; }
+.heroSubtitle { max-width: 650px; margin: 26px 0 0; color: var(--case-blue); font-size: clamp(1.05rem, 1.6vw, 1.38rem); line-height: 1.35; }
+.heroCopy p, .sectionIntro p, .precisionGrid p, .decisionCopy p { margin: 0; color: #40453e; font-size: 1rem; line-height: 1.62; }
+.heroCopy p + p, .sectionIntro p + p, .precisionGrid p + p, .decisionCopy p + p { margin-top: 17px; }
+.productQuestion { display: grid; grid-template-columns: 190px 1fr; gap: 30px; padding: 22px 0; border-top: 1px solid #c0c7be; border-bottom: 1px solid #c0c7be; }
+.productQuestion span { color: var(--case-blue); font-size: .74rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.productQuestion p { max-width: 870px; margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.5rem, 2.5vw, 2.55rem); line-height: 1.18; letter-spacing: -.03em; }
+
+.section, .precisionSection, .builtSection, .linksSection { padding: clamp(78px, 9vw, 124px) 0; }
+.sectionMarker { color: var(--case-blue); font-size: .76rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.sectionIntro, .precisionGrid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(300px, .65fr); gap: clamp(48px, 8vw, 116px); align-items: start; margin: 28px 0 clamp(46px, 6vw, 74px); }
+.sectionIntro h2, .precisionGrid h2 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.8rem, 4.9vw, 5rem); font-weight: 400; line-height: 1; letter-spacing: -.05em; }
+.sectionIntro strong { display: block; margin-top: 22px; padding-top: 18px; border-top: 1px solid #c9cec7; color: var(--case-green); font-family: Georgia, 'Times New Roman', serif; font-size: 1.25rem; font-weight: 400; line-height: 1.35; }
+.figure { margin: 0; }
+.figureFrame { overflow: hidden; border: 1px solid #cbd1c9; background: #0d1320; }
+.figureFrame img { display: block; width: 100%; height: auto; object-fit: contain; }
+.figure figcaption { margin-top: 11px; color: #6d726a; font-size: .76rem; line-height: 1.45; }
+
+.movementSection { padding: clamp(86px, 10vw, 138px) 0; background: #eff3ef; }
+.movementSection blockquote { display: grid; grid-template-columns: .8fr 1.2fr; margin: clamp(52px, 7vw, 86px) 0 0; padding: 22px 0; border-top: 1px solid #b8c0b6; border-bottom: 1px solid #b8c0b6; }
+.movementSection blockquote span { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.55rem, 2.7vw, 2.8rem); line-height: 1.12; letter-spacing: -.035em; }
+.movementSection blockquote span:last-child { padding-left: 28px; border-left: 1px solid #b8c0b6; color: var(--case-green); }
+
+.precisionSection { border-bottom: 1px solid #c1c8bf; }
+.precisionGrid { margin-bottom: 0; }
+.builtSection > p { max-width: 1040px; margin: 28px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.75rem, 3vw, 3rem); line-height: 1.15; letter-spacing: -.035em; }
+.scopeRow { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 38px; border-top: 1px solid #bec5bc; border-bottom: 1px solid #bec5bc; }
+.scopeRow span { padding: 16px 18px 16px 0; color: #4d524b; font-size: .84rem; }
+.scopeRow span + span { padding-left: 18px; border-left: 1px solid #bec5bc; }
+
+.linksSection { border-top: 1px solid #c1c8bf; }
+.linkRows { display: grid; grid-template-columns: 1fr 1fr; margin-top: 28px; border-top: 1px solid #b9c0b7; }
+.linkRows a { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; min-height: 94px; padding: 28px 26px 26px 0; border-bottom: 1px solid #b9c0b7; }
+.linkRows a + a { padding-left: 26px; border-left: 1px solid #b9c0b7; }
+.linkRows span { font-size: clamp(1rem, 1.45vw, 1.22rem); font-weight: 600; letter-spacing: .01em; text-transform: uppercase; }
+.linkRows i { color: #6a7068; font-size: .86rem; font-style: normal; transition: color 160ms ease, transform 160ms ease; }
+.linkRows a:hover span, .linkRows a:focus-visible span { color: var(--case-blue); }
+.linkRows a:hover i, .linkRows a:focus-visible i { color: var(--case-blue); transform: translate(2px, -2px); }
+.linkRows .primaryLink span { color: var(--case-green); font-size: clamp(1.08rem, 1.6vw, 1.34rem); }
+
+.decisionSection { padding: clamp(88px, 10vw, 142px) 0; background: var(--case-green); color: #f7f9f4; }
+.decisionSection .sectionMarker { color: var(--case-lime); }
+.decisionSection h2 { margin: 28px 0 0; font-family: Arial, Helvetica, sans-serif; font-size: clamp(3.5rem, 7vw, 7.2rem); font-weight: 500; line-height: .93; letter-spacing: -.065em; }
+.decisionCopy { max-width: 720px; margin: clamp(44px, 6vw, 72px) 0 0 auto; }
+.decisionCopy p { color: rgb(255 255 255 / 74%); }
+.caseActions { display: flex; justify-content: space-between; gap: 28px; margin-top: clamp(58px, 7vw, 88px); padding-top: 20px; border-top: 1px solid rgb(255 255 255 / 30%); color: rgb(255 255 255 / 76%); font-size: .82rem; }
+.caseActions a:hover, .caseActions a:focus-visible { color: var(--case-lime); }
+.caseFooter { padding: 28px 0; background: #101a31; color: rgb(255 255 255 / 72%); }
+.caseFooter > div { display: grid; grid-template-columns: 1fr auto auto; gap: 40px; font-size: .77rem; }
+.caseFooter a:hover, .caseFooter a:focus-visible { color: var(--case-lime); }
+
+@media (max-width: 980px) {
+  .heroGrid, .sectionIntro, .precisionGrid { grid-template-columns: 1fr; }
+  .heroCopy, .sectionIntro > div, .precisionGrid > div { max-width: 660px; margin-left: auto; }
+}
+
+@media (max-width: 700px) {
+  .hero { padding-top: 38px; }
+  .backLink { margin-bottom: 46px; }
+  .heroMeta { grid-template-columns: 1fr; gap: 7px; font-size: .69rem; }
+  .hero h1 { font-size: clamp(4.2rem, 22vw, 6rem); }
+  .productQuestion { grid-template-columns: 1fr; gap: 14px; }
+  .sectionIntro h2, .precisionGrid h2 { font-size: clamp(2.6rem, 12.5vw, 3.8rem); }
+  .movementSection blockquote { grid-template-columns: 1fr; }
+  .movementSection blockquote span:last-child { margin-top: 17px; padding: 17px 0 0; border-top: 1px solid #b8c0b6; border-left: 0; }
+  .scopeRow { grid-template-columns: 1fr 1fr; }
+  .scopeRow span:nth-child(3) { border-top: 1px solid #bec5bc; border-left: 0; }
+  .scopeRow span:nth-child(4) { border-top: 1px solid #bec5bc; }
+  .linkRows { grid-template-columns: 1fr; }
+  .linkRows a, .linkRows a + a { min-height: 82px; padding: 23px 0; border-left: 0; }
+  .decisionSection h2 { font-size: clamp(3.2rem, 17vw, 5rem); }
+  .caseActions { display: grid; }
+  .caseActions a:last-child { text-align: right; }
+  .caseFooter > div { grid-template-columns: 1fr; gap: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page *, .page *::before, .page *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}

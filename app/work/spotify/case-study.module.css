@@ -1,0 +1,61 @@
+.page {
+  --case-green: #123f31;
+  --case-blue: #1648d8;
+  --case-lime: #c9f54a;
+  background: #fbfcfa;
+  color: #11130f;
+}
+
+.backLink { display: inline-block; margin-bottom: clamp(30px, 3.5vw, 46px); color: #62675f; font-size: .82rem; }
+.backLink:hover, .backLink:focus-visible { color: var(--case-blue); }
+.hero { padding: clamp(32px, 4vw, 48px) 0 clamp(52px, 6vw, 74px); }
+.heroMeta { display: grid; grid-template-columns: 1fr 1fr auto; gap: 24px; padding: 12px 0; border-top: 1px solid #c8cec5; color: #656a62; font-size: .76rem; letter-spacing: .06em; text-transform: uppercase; }
+.heroGrid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(320px, .6fr); gap: clamp(42px, 7vw, 96px); align-items: end; padding-top: clamp(34px, 4vw, 50px); }
+.hero h1 { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: clamp(3.7rem, 6.7vw, 6.65rem); font-weight: 500; line-height: .9; letter-spacing: -.065em; }
+.heroSubtitle { margin: 18px 0 0; color: var(--case-blue); font-size: clamp(1rem, 1.35vw, 1.2rem); line-height: 1.35; }
+.heroCopy p, .storyGrid p, .closingGrid p { margin: 0; color: #42473f; font-size: 1rem; line-height: 1.62; }
+.heroCopy p + p, .storyGrid p + p, .closingGrid p + p { margin-top: 16px; }
+
+.sectionMarker { color: var(--case-blue); font-size: .76rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.storySection { padding: clamp(58px, 6vw, 80px) 0; }
+.storyGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .62fr); gap: clamp(42px, 7vw, 96px); align-items: start; margin-top: 23px; }
+.storyGrid h2, .workSection h2, .closingGrid h2 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.35rem, 3.9vw, 3.95rem); font-weight: 400; line-height: 1.02; letter-spacing: -.046em; }
+
+.workSection { padding: clamp(60px, 6.5vw, 88px) 0; background: #eff3ef; }
+.workSection h2 { margin: 23px 0 clamp(32px, 4vw, 46px); }
+.embedWrap { width: min(100%, 1120px); aspect-ratio: 16 / 10; margin: 0 auto; overflow: hidden; background: #fff; }
+.embedWrap iframe { display: block; width: 100%; height: 100%; border: 0; }
+.gammaLink { display: block; width: min(100%, 1120px); margin: 14px auto 0; color: var(--case-blue); font-size: .76rem; font-weight: 700; letter-spacing: .08em; text-align: right; text-transform: uppercase; }
+.gammaLink:hover, .gammaLink:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+
+.lookingBackSection { padding: clamp(62px, 6.5vw, 88px) 0; background: var(--case-green); color: #f8faf5; }
+.lookingBackSection .sectionMarker { color: var(--case-lime); }
+.closingGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .62fr); gap: clamp(42px, 7vw, 96px); align-items: start; margin-top: 23px; }
+.closingGrid h2 { color: #fff; }
+.closingGrid p { color: rgb(255 255 255 / 76%); }
+.caseActions { display: flex; justify-content: space-between; gap: 28px; margin-top: clamp(42px, 5vw, 60px); padding-top: 18px; border-top: 1px solid rgb(255 255 255 / 30%); color: rgb(255 255 255 / 76%); font-size: .82rem; }
+.caseActions a:hover, .caseActions a:focus-visible { color: var(--case-lime); }
+.caseFooter { padding: 26px 0; background: #101a31; color: rgb(255 255 255 / 72%); }
+.caseFooter > div { display: grid; grid-template-columns: 1fr auto auto; gap: 40px; font-size: .77rem; }
+.caseFooter a:hover, .caseFooter a:focus-visible { color: var(--case-lime); }
+
+@media (max-width: 860px) {
+  .heroGrid, .storyGrid, .closingGrid { grid-template-columns: 1fr; }
+  .heroCopy, .storyGrid > div, .closingGrid > div { max-width: 650px; margin-left: auto; }
+}
+
+@media (max-width: 700px) {
+  .hero { padding-top: 34px; }
+  .backLink { margin-bottom: 38px; }
+  .heroMeta { grid-template-columns: 1fr; gap: 7px; font-size: .69rem; }
+  .hero h1 { font-size: clamp(3.55rem, 18vw, 4.95rem); }
+  .storyGrid h2, .workSection h2, .closingGrid h2 { font-size: clamp(2.3rem, 10.8vw, 3.25rem); }
+  .embedWrap { aspect-ratio: 4 / 3; }
+  .caseActions { display: grid; }
+  .caseActions a:last-child { text-align: right; }
+  .caseFooter > div { grid-template-columns: 1fr; gap: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page *, .page *::before, .page *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}

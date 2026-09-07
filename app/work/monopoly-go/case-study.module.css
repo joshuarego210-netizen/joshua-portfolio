@@ -1,0 +1,75 @@
+.page {
+  --case-green: #123f31;
+  --case-blue: #1648d8;
+  --case-lime: #c9f54a;
+  background: #fbfcfa;
+  color: #11130f;
+}
+
+.backLink { display: inline-block; margin-bottom: clamp(42px, 5vw, 68px); color: #62675f; font-size: .82rem; }
+.backLink:hover, .backLink:focus-visible { color: var(--case-blue); }
+.hero { padding: clamp(40px, 5vw, 66px) 0 clamp(68px, 8vw, 105px); }
+.heroMeta { display: grid; grid-template-columns: 1fr 1fr auto; gap: 24px; padding: 13px 0; border-top: 1px solid #c8cec5; color: #656a62; font-size: .76rem; letter-spacing: .06em; text-transform: uppercase; }
+.heroGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .62fr); gap: clamp(48px, 8vw, 116px); align-items: end; padding-top: clamp(46px, 6vw, 76px); }
+.hero h1 { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: clamp(4.25rem, 8.2vw, 8.25rem); font-weight: 500; line-height: .88; letter-spacing: -.07em; }
+.heroSubtitle { margin: 24px 0 0; color: var(--case-blue); font-size: clamp(1.05rem, 1.55vw, 1.35rem); }
+.heroCopy p, .textGrid p, .mapIntro p, .principleCopy p { margin: 0; color: #42473f; font-size: 1rem; line-height: 1.62; }
+.heroCopy p + p, .textGrid p + p, .principleCopy p + p { margin-top: 17px; }
+
+.problemSection, .frictionsSection { padding: clamp(72px, 8vw, 112px) 0; }
+.sectionMarker { color: var(--case-blue); font-size: .76rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.textGrid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(300px, .66fr); gap: clamp(48px, 8vw, 116px); align-items: start; margin-top: 27px; }
+.textGrid h2, .mapIntro h2 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.65rem, 4.65vw, 4.75rem); font-weight: 400; line-height: 1; letter-spacing: -.048em; }
+
+.mapSection { padding: clamp(72px, 8vw, 112px) 0; background: #eff3ef; }
+.mapIntro { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(300px, .66fr); gap: clamp(48px, 8vw, 116px); align-items: start; margin: 27px 0 clamp(48px, 6vw, 78px); }
+.analysisFigure { width: min(72%, 910px); margin: 0 auto; }
+.analysisFigure img { display: block; width: 100%; height: auto; object-fit: contain; }
+
+.frictionsSection > h2 { margin: 27px 0 clamp(42px, 5vw, 64px); font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.75rem, 4.8vw, 4.9rem); font-weight: 400; line-height: 1; letter-spacing: -.048em; }
+.frictionList { display: grid; grid-template-columns: 1fr 1fr; margin: 0; padding: 0; border-top: 1px solid #c2c8c0; list-style: none; }
+.frictionList li { display: grid; grid-template-columns: 44px 1fr; gap: 16px; padding: 26px 28px 28px 0; border-bottom: 1px solid #c2c8c0; }
+.frictionList li:nth-child(even) { padding-left: 28px; border-left: 1px solid #c2c8c0; }
+.frictionList li > span { color: var(--case-blue); font-size: .78rem; font-weight: 700; letter-spacing: .07em; }
+.frictionList h3 { margin: 0 0 9px; font-size: 1.08rem; font-weight: 600; letter-spacing: -.02em; }
+.frictionList p { max-width: 500px; margin: 0; color: #555a52; font-size: .91rem; line-height: 1.55; }
+
+.principleSection { padding: clamp(78px, 9vw, 124px) 0; background: var(--case-green); color: #f8faf5; }
+.principleSection .sectionMarker { color: var(--case-lime); }
+.principleSection h2 { max-width: 1120px; margin: 27px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.6rem, 4.8vw, 4.9rem); font-weight: 400; line-height: 1.03; letter-spacing: -.045em; }
+.principleSection h2 span { display: block; }
+.principleSection h2 span:last-child { margin-top: 8px; color: var(--case-lime); }
+.principleCopy { max-width: 700px; margin: 40px 0 0 auto; }
+.principleCopy p { color: rgb(255 255 255 / 76%); }
+.principleCopy .implicationNote { margin-top: 28px; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / 26%); font-size: .86rem; }
+.implicationNote strong { color: #fff; font-weight: 600; }
+.caseActions { display: flex; justify-content: space-between; gap: 28px; margin-top: clamp(52px, 7vw, 82px); padding-top: 19px; border-top: 1px solid rgb(255 255 255 / 30%); color: rgb(255 255 255 / 76%); font-size: .82rem; }
+.caseActions a:hover, .caseActions a:focus-visible { color: var(--case-lime); }
+.caseFooter { padding: 28px 0; background: #101a31; color: rgb(255 255 255 / 72%); }
+.caseFooter > div { display: grid; grid-template-columns: 1fr auto auto; gap: 40px; font-size: .77rem; }
+.caseFooter a:hover, .caseFooter a:focus-visible { color: var(--case-lime); }
+
+@media (max-width: 980px) {
+  .heroGrid, .textGrid, .mapIntro { grid-template-columns: 1fr; }
+  .heroCopy, .textGrid > div, .mapIntro p { max-width: 660px; margin-left: auto; }
+  .analysisFigure { width: min(82%, 820px); }
+}
+
+@media (max-width: 700px) {
+  .hero { padding-top: 38px; }
+  .backLink { margin-bottom: 45px; }
+  .heroMeta { grid-template-columns: 1fr; gap: 7px; font-size: .69rem; }
+  .hero h1 { font-size: clamp(3.7rem, 19vw, 5.35rem); }
+  .textGrid h2, .mapIntro h2 { font-size: clamp(2.55rem, 12.3vw, 3.7rem); }
+  .analysisFigure { width: 100%; }
+  .frictionList { grid-template-columns: 1fr; }
+  .frictionList li:nth-child(even) { padding-left: 0; border-left: 0; }
+  .principleSection h2 { font-size: clamp(2.35rem, 11.5vw, 3.5rem); }
+  .caseActions { display: grid; }
+  .caseActions a:last-child { text-align: right; }
+  .caseFooter > div { grid-template-columns: 1fr; gap: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page *, .page *::before, .page *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
