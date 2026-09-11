@@ -1,5 +1,42 @@
 /* oxlint-disable next/no-html-link-for-pages */
+import type { Metadata } from 'next';
 import Image from 'next/image';
+
+const siteUrl = 'https://portfolio.joshuarego.workers.dev/';
+const title = 'Joshua Rego — Product Manager · Designer · Builder';
+const description =
+  '0→1 products, AI prototypes, gaming systems and real-world product work — from problem discovery through design, launch and iteration.';
+const socialImageUrl = `${siteUrl}social-preview.png`;
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  alternates: {
+    canonical: siteUrl,
+  },
+  openGraph: {
+    type: 'website',
+    url: siteUrl,
+    title,
+    description,
+    siteName: 'Joshua Rego',
+    images: [
+      {
+        url: socialImageUrl,
+        width: 1200,
+        height: 630,
+        alt: 'Joshua Rego — Product Manager · Designer · Builder',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    images: [socialImageUrl],
+  },
+};
 
 type VisualKind = 'quiet' | 'pipeline' | 'battle' | 'buildcheck' | 'prime' | 'patent';
 
