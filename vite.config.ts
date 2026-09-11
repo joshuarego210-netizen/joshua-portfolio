@@ -8,6 +8,28 @@ const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   '00000000-0000-4000-8000-000000000000';
 
 const { d1, r2 } = hostingConfig;
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const gitHubPagesBasePath = '/joshua-portfolio';
+
+const gitHubPagesRootPathPlugin = {
+  name: 'github-pages-root-paths',
+  enforce: 'pre' as const,
+  transform(code: string, id: string) {
+    const filePath = id.split('?')[0];
+
+    if (!filePath.includes('/app/') || !filePath.endsWith('.tsx')) {
+      return null;
+    }
+
+    return {
+      code: code.replace(
+        /(["'`])\/(?!\/|joshua-portfolio(?:\/|["'`]))/g,
+        `$1${gitHubPagesBasePath}/`,
+      ),
+      map: null,
+    };
+  },
+};
 
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === 'seatbelt';
@@ -40,6 +62,13 @@ export default defineConfig(async () => {
   process.env.WRANGLER_WRITE_LOGS ??= 'false';
   process.env.WRANGLER_LOG_PATH ??= '.wrangler/logs';
   process.env.MINIFLARE_REGISTRY_PATH ??= '.wrangler/registry';
+
+  if (isGitHubPages) {
+    return {
+      css: { postcss: { plugins: [tailwindcss()] } },
+      plugins: [gitHubPagesRootPathPlugin, vinext()],
+    };
+  }
 
   // Wrangler snapshots its log path while the Cloudflare plugin is imported.
   const { cloudflare } = await import('@cloudflare/vite-plugin');

@@ -2,7 +2,10 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
-const siteUrl = 'https://portfolio.joshuarego.workers.dev/';
+const siteUrl =
+  process.env.GITHUB_PAGES === 'true'
+    ? 'https://joshuarego210-netizen.github.io/joshua-portfolio/'
+    : 'https://portfolio.joshuarego.workers.dev/';
 const title = 'Joshua Rego — Product Manager · Designer · Builder';
 const description =
   '0→1 products, AI prototypes, gaming systems and real-world product work — from problem discovery through design, launch and iteration.';
