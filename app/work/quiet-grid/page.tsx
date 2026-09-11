@@ -11,18 +11,29 @@ export const metadata: Metadata = {
 
 const proof = [
   ['20', 'products'],
-  ['9', 'orders'],
-  ['₹6.6K', 'early revenue'],
+  ['11', 'orders'],
+  ['₹9.8K', 'early revenue'],
   ['0', 'Etsy Ads'],
 ];
 
-const results = [
-  ['268', 'visits'],
-  ['9', 'orders'],
-  ['3.4%', 'conversion'],
-  ['₹6,579', 'revenue'],
-  ['20', 'products live'],
+const primaryResults = [
+  ['373', 'visits'],
+  ['496', 'listing views'],
+  ['11', 'orders'],
+  ['₹9,817', 'revenue'],
+  ['2.9%', 'conversion'],
+];
+
+const supportingResults = [
+  ['35', 'item favourites'],
   ['0', 'Etsy Ads'],
+];
+
+const researchDecisions = [
+  'Protect validated products before changing everything.',
+  'Let real customer behaviour carry more weight than trend-chasing.',
+  'Broaden Quiet Grid carefully from architecture resources toward useful presentation and handoff resources for designers.',
+  'Test one direction at a time instead of launching many speculative products.',
 ];
 
 const closingSignals = ['20 products shipped', 'Built end-to-end', 'Still building.'];
@@ -146,7 +157,7 @@ export default function QuietGridCaseStudy() {
                 src="/quiet-grid/storefront-full.png"
                 alt="Full Quiet Grid Designs Etsy storefront showing the breadth of its 20-product catalogue"
                 width={2768}
-                height={4777}
+                height={5210}
                 sizes="(max-width: 700px) calc(100vw - 36px), 64vw"
               />
             </div>
@@ -219,8 +230,8 @@ export default function QuietGridCaseStudy() {
               alt="Etsy product-level performance showing views, favourites, orders and revenue by listing"
               caption="Product-level behaviour provided directional evidence for the next catalogue bets."
               className={styles.statsFigure}
-              width={2346}
-              height={1168}
+              width={2336}
+              height={1725}
             />
             <aside className={styles.learningCallout}>
               <span>What I learned</span>
@@ -245,21 +256,24 @@ export default function QuietGridCaseStudy() {
           <div className={styles.resultsComposition}>
             <div className={styles.resultsInterpretation}>
               <p className={styles.resultsQualifier}>Early traction · first month</p>
-              <dl className={styles.resultsStack} aria-label="Quiet Grid results by September 4">
-                {results.map(([value, label]) => <div key={label}><dd>{value}</dd><dt>{label}</dt></div>)}
+              <dl className={styles.resultsStack} aria-label="Quiet Grid primary product funnel through September 11">
+                {primaryResults.map(([value, label]) => <div key={label}><dd>{value}</dd><dt>{label}</dt></div>)}
+              </dl>
+              <dl className={styles.resultsSupporting} aria-label="Quiet Grid supporting signals through September 11">
+                {supportingResults.map(([value, label]) => <div key={label}><dd>{value}</dd><dt>{label}</dt></div>)}
               </dl>
             </div>
             <figure className={`${styles.figure} ${styles.dashboardFigure}`}>
               <div className={styles.dashboardFrame}>
                 <Image
                   src="/quiet-grid/shop-dashboard.png"
-                  alt="Etsy Shop Manager analytics showing visits, orders, conversion, revenue and leading listing performance"
+                  alt="Etsy Shop Manager analytics showing visits, orders, conversion, revenue and shopper behaviour"
                   width={2768}
-                  height={6133}
+                  height={4133}
                   sizes="(max-width: 700px) calc(100vw - 36px), 68vw"
                 />
               </div>
-              <figcaption>Etsy Shop Manager, August 6–September 4. Actual shop performance; 0 Etsy Ads during this period.</figcaption>
+              <figcaption>Etsy Shop Manager, August 12–September 11. Actual shop performance; 0 Etsy Ads during this period.</figcaption>
             </figure>
           </div>
           <div className={styles.resultsCopy}>
@@ -268,8 +282,23 @@ export default function QuietGridCaseStudy() {
           </div>
         </section>
 
+        <section className={`${styles.textSection} ${styles.twoColumn} shell`}>
+          <div className={styles.sectionMarker}>09 / Evidence-led product strategy</div>
+          <div className={styles.readingColumn}>
+            <p className={styles.researchSequence}>Build → Sell → Observe → Research → Decide</p>
+            <h2>The business became the research lab</h2>
+            <p>Once real buyers started behaving differently across products, I stopped treating the catalogue as a collection of things I had made and started treating it as evidence. I combined transaction and listing-performance data with AI-assisted competitor and market research to investigate pricing, demand, positioning and adjacent opportunities at greater scale.</p>
+            <p>The goal was not more AI-generated ideas, but better decisions: separate observed evidence from inference and hypotheses, protect what was already working, and prioritise the next product based on real signals rather than instinct alone.</p>
+            <ol className={styles.researchDecisions}>
+              {researchDecisions.map((decision, index) => (
+                <li key={decision}><span>{String(index + 1).padStart(2, '0')}</span><p>{decision}</p></li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
         <section className={`${styles.closingSection} shell`}>
-          <div className={styles.sectionMarker}>09 / What changed</div>
+          <div className={styles.sectionMarker}>10 / What changed</div>
           <div className={styles.closingCopy}>
             <h2>A real feedback loop</h2>
             <p>Building Quiet Grid made the feedback loop real. Research could suggest an opportunity, but quality determined what shipped. Small behavioural signals could shape the roadmap without pretending weak evidence was certainty.</p>

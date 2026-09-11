@@ -26,8 +26,8 @@ const projects: Project[] = [
       'Built and launched a live product business for architecture and design professionals — owning research, product, design, pricing and organic GTM.',
     facts: [
       { label: '', value: '20 products' },
-      { label: '', value: '9 orders' },
-      { label: '', value: '₹6.6K early revenue' },
+      { label: '', value: '11 orders' },
+      { label: '', value: '₹9.8K early revenue' },
       { label: '', value: '0 Etsy Ads' },
     ],
     note: 'Early traction · first month · currently active',
